@@ -1,34 +1,34 @@
-﻿using ProxyHttpClient.ErrorHandling;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Configuration;
-using System.Text;
 
-namespace ProxyHttpClient.Models
+namespace ProxyHttpClient
 {
     /// <summary>
     /// Client settings
     /// Target url etc
     /// </summary>
-    public partial class ProxyClientConfig
+    public sealed class ProxyClientConfig : ProxyClientConfigInternals
     {
-        internal Uri _targetUri;
-
-        public ProxyClientConfig()
+        /// <summary>
+        /// Will throw a ProxyClientUriException if it can't create and Uri from the provided url.
+        /// </summary>
+        public ProxyClientConfig(string url = null, string appSettingKey = null)
         {
             try
             {
-#if RELEASE
-                _targetUri = new Uri(ConfigurationManager.AppSettings["ProxyClientUrl"]);
-#else
-                _targetUri = new Uri("http://api.scb.se/OV0104/v1/doris/sv/ssd/BE/BE0101/BE0101A/BefolkningNy");
-#endif
+                _targetUri = !string.IsNullOrEmpty(url) ? new Uri(url) : GetUriFromAppsettings(appSettingKey);
             }
-            catch (ProxyUriException pue)
+            catch (ProxyClientUriException e)
             {
-                throw pue;
+                throw new ProxyClientUriException("Error: Could not create an Uri from the url provided.",e.InnerException);
             }
         }
 
+        #region Privates
+        private Uri GetUriFromAppsettings(string key)
+        {
+            return new Uri(ConfigurationManager.AppSettings[key]);
+        }
+        #endregion
     }
 }

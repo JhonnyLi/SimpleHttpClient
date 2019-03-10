@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ProxyHttpClient.ErrorHandling
+namespace ProxyHttpClient
 {
     [Serializable]
-    public sealed class ProxyUriException : Exception
+    public sealed class ProxyClientUriException : Exception
     {
-        public ProxyUriException()
+        public ProxyClientUriException()
         {
         }
 
-        public ProxyUriException(string message) : base(message)
+        public ProxyClientUriException(string message) : base(message)
         {
         }
 
-        public ProxyUriException(string message, Exception inner) : base(message, inner)
+        public ProxyClientUriException(string message, Exception inner) : base(message, inner)
         {
         }
     }

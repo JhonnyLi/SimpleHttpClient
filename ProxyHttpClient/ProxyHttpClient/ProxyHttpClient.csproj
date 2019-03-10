@@ -2,10 +2,24 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyVersion>0.0.0.1</AssemblyVersion>
+    <FileVersion>0.0.0.1</FileVersion>
+    <RepositoryUrl>https://github.com/JhonnyLi/ProxyHttpClient</RepositoryUrl>
+    <RepositoryType>Private</RepositoryType>
+    <PackageTags></PackageTags>
+    <Company />
+    <Authors>JhonnyLi</Authors>
+    <Version>0.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
   </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy C:\Users\jhonn\.nuget\packages\newtonsoft.json\12.0.1\lib\netstandard2.0\*.dll $(OutDir)" />
+  </Target>
 
 </Project>
