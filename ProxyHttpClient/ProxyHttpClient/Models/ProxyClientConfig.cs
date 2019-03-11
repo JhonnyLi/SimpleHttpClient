@@ -7,22 +7,37 @@ namespace ProxyHttpClient
     /// Client settings
     /// Target url etc
     /// </summary>
-    public sealed class ProxyClientConfig : ProxyClientConfigInternals
+    public class ProxyClientConfig : ProxyClientConfigInternals
     {
         /// <summary>
         /// Will throw a ProxyClientUriException if it can't create and Uri from the provided url.
         /// </summary>
         public ProxyClientConfig(string url = null)
         {
-            try
-            {
-                _targetUri = !string.IsNullOrEmpty(url) ? new Uri(url) : null;
-            }
-            catch (ProxyClientUriException e)
-            {
-                throw new ProxyClientUriException("Error: Could not create an Uri from the url provided.",e.InnerException);
-            }
+            _targetUri = CreateUriFromUrl(url);
         }
 
+        public Uri Uri { get { return _targetUri; } }
+
+        protected Uri CreateUriFromUrl(string url)
+        {
+            if (!string.IsNullOrEmpty(url) && Uri.IsWellFormedUriString(url, UriKind.Absolute))
+            {
+                Uri result;
+                try
+                {
+                    result = new Uri(url);
+                }
+                catch (ProxyClientUriException e)
+                {
+                    throw new ProxyClientUriException("Error: Could not create an Uri from the url provided.", e.InnerException);
+                }
+                return result;
+            }
+            else
+            {
+                throw new ProxyClientUriException("Error: Could not create an Uri from the url provided.");
+            }
+        }
     }
 }

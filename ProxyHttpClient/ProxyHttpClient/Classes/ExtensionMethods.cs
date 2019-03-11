@@ -7,19 +7,42 @@ namespace ProxyHttpClient
 {
     public static class ExtensionMethods
     {
-        public static void AddCustomHeader(this ProxyClientConfig model, string key, string value)
+        /// <summary>
+        /// Add a custom header to the request
+        /// </summary>
+        /// <param name="model"></param>
+        /// <param name="key"></param>
+        /// <param name="value"></param>
+        /// <returns>Returns True if successful and False if something went wrong</returns>
+        public static bool AddCustomHeader(this ProxyClientConfig model, string key, string value)
         {
-            if (!string.IsNullOrEmpty(key) && !string.IsNullOrEmpty(value))
+            if (!string.IsNullOrEmpty(key) && !string.IsNullOrEmpty(value) && !model.CustomHeaders.ContainsKey(key))
             {
                 model.CustomHeaders.Add(key, value);
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
 
-        public static void RemoveCustomHeader(this ProxyClientConfig model, string key)
+        /// <summary>
+        /// Remove a custom header from the request
+        /// </summary>
+        /// <param name="model"></param>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        public static bool RemoveCustomHeader(this ProxyClientConfig model, string key)
         {
             if (!string.IsNullOrEmpty(key) && model.CustomHeaders.ContainsKey(key))
             {
                 model.CustomHeaders.Remove(key);
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
 
