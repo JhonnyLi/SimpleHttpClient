@@ -12,11 +12,11 @@ namespace ProxyHttpClient
         /// <summary>
         /// Will throw a ProxyClientUriException if it can't create and Uri from the provided url.
         /// </summary>
-        public ProxyClientConfig(string url = null, string appSettingKey = null)
+        public ProxyClientConfig(string url = null)
         {
             try
             {
-                _targetUri = !string.IsNullOrEmpty(url) ? new Uri(url) : GetUriFromAppsettings(appSettingKey);
+                _targetUri = !string.IsNullOrEmpty(url) ? new Uri(url) : null;
             }
             catch (ProxyClientUriException e)
             {
@@ -24,11 +24,5 @@ namespace ProxyHttpClient
             }
         }
 
-        #region Privates
-        private Uri GetUriFromAppsettings(string key)
-        {
-            return new Uri(ConfigurationManager.AppSettings[key]);
-        }
-        #endregion
     }
 }
