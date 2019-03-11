@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace ProxyHttpClient
 {
-    public class ProxyClient
+    public class SimpleClient
     {
         /// <summary>
         /// Method Post
@@ -18,7 +18,7 @@ namespace ProxyHttpClient
         /// <param name="config">Contains all the parameters needed to complete the call</param>
         /// <param name="model">The data that will be serialized and sent with the request</param>
         /// <returns>Task<string></returns>
-        public Task<string> PostRequestAsync<T>(ProxyClientConfig config, T model)
+        public Task<string> PostRequestAsync<T>(SimpleClientConfig config, T model)
         {
             Task<string> result = null;
             using (HttpClient client = new HttpClient())

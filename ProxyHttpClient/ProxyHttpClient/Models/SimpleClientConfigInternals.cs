@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ProxyHttpClient
 {
-    public abstract class ProxyClientConfigInternals
+    public abstract class SimpleClientConfigInternals
     {
         /// <summary>
         /// The target Uri

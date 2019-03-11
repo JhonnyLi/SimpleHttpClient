@@ -14,7 +14,7 @@ namespace ProxyHttpClient
         /// <param name="key"></param>
         /// <param name="value"></param>
         /// <returns>Returns True if successful and False if something went wrong</returns>
-        public static bool AddCustomHeader(this ProxyClientConfig model, string key, string value)
+        public static bool AddCustomHeader(this SimpleClientConfig model, string key, string value)
         {
             if (!string.IsNullOrEmpty(key) && !string.IsNullOrEmpty(value) && !model.CustomHeaders.ContainsKey(key))
             {
@@ -33,7 +33,7 @@ namespace ProxyHttpClient
         /// <param name="model"></param>
         /// <param name="key"></param>
         /// <returns></returns>
-        public static bool RemoveCustomHeader(this ProxyClientConfig model, string key)
+        public static bool RemoveCustomHeader(this SimpleClientConfig model, string key)
         {
             if (!string.IsNullOrEmpty(key) && model.CustomHeaders.ContainsKey(key))
             {
@@ -51,8 +51,9 @@ namespace ProxyHttpClient
         /// </summary>
         /// <param name="model"></param>
         /// <param name="protocol"></param>
-        public static void AddProtocolTypeByName(this ProxyClientConfig model, SecurityProtocolNames protocol)
+        public static bool AddProtocolTypeByName(this SimpleClientConfig model, SecurityProtocolNames protocol)
         {
+            bool result = true;
             switch (protocol)
             {
                 case SecurityProtocolNames.Ssl3:
@@ -68,11 +69,14 @@ namespace ProxyHttpClient
                     model.ProtocolType = SecurityProtocolType.Tls12;
                     break;
                 case SecurityProtocolNames.None:
-                default:
                     model.ProtocolType = 0;
                     break;
-
+                default:
+                    result = false;
+                    break;
             }
+
+            return result;
 
         }
     }

@@ -12,20 +12,20 @@ namespace ProxyHttpClient.Test
         public const string MockCustomHeaderKey = "key";
         public const string MockCustomHeaderValue = "value";
 
-        public static ProxyClientConfig GetMockupConfig(string url)
+        public static SimpleClientConfig GetMockupConfig(string url)
         {
-            var model = new ProxyClientConfig(url);
+            var model = new SimpleClientConfig(url);
             return model;
         }
-        public static ProxyClientConfig GetMockupConfig()
+        public static SimpleClientConfig GetMockupConfig()
         {
-            var model = new ProxyClientConfig(MockUrl);
+            var model = new SimpleClientConfig(MockUrl);
             return model;
         }
 
-        public static ProxyClientConfig GetMockupConfigWithCustomHeader()
+        public static SimpleClientConfig GetMockupConfigWithCustomHeader()
         {
-            var model = new ProxyClientConfig(MockUrl);
+            var model = new SimpleClientConfig(MockUrl);
             model.AddCustomHeader(MockCustomHeaderKey, MockCustomHeaderValue);
             return model;
         }

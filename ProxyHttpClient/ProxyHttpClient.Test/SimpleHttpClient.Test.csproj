@@ -50,16 +50,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Mockup\Mockup.cs" />
-    <Compile Include="ProxyClientConfigTests.cs" />
+    <Compile Include="SimpleClientConfigTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ProxyHttpClient\ProxyHttpClient.csproj">
+    <ProjectReference Include="..\ProxyHttpClient\SimpleHttpClient.csproj">
       <Project>{42d6df74-9921-450f-b601-9c9a332f3daf}</Project>
-      <Name>ProxyHttpClient</Name>
+      <Name>SimpleHttpClient</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

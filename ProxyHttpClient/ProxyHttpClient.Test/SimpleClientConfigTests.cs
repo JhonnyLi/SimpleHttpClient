@@ -4,12 +4,12 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace ProxyHttpClient.Test
 {
     [TestClass]
-    public class ProxyClientConfigTests
+    public class SimpleClientConfigTests
     {
         [TestMethod]
         public void ConstructorTest()
         {
-            ProxyClientConfig target = Mockup.GetMockupConfig();
+            SimpleClientConfig target = Mockup.GetMockupConfig();
             PrivateObject obj = new PrivateObject(target);
             var retVal = obj.Invoke("CreateUriFromUrl",Mockup.MockUrl);
             Assert.AreEqual(typeof(Uri),retVal.GetType());
@@ -17,7 +17,7 @@ namespace ProxyHttpClient.Test
         [TestMethod]
         public void AddCustomHeaderTest()
         {
-            ProxyHttpClient.ProxyClientConfig model = Mockup.GetMockupConfig();
+            ProxyHttpClient.SimpleClientConfig model = Mockup.GetMockupConfig();
             var result = model.AddCustomHeader("key", "value");
 
             Assert.IsTrue(result);
@@ -26,7 +26,7 @@ namespace ProxyHttpClient.Test
         [TestMethod]
         public void RemoveCustomHeaderTest()
         {
-            ProxyHttpClient.ProxyClientConfig model = Mockup.GetMockupConfigWithCustomHeader();
+            ProxyHttpClient.SimpleClientConfig model = Mockup.GetMockupConfigWithCustomHeader();
             var result = model.RemoveCustomHeader(Mockup.MockCustomHeaderKey);
             Assert.IsTrue(result);
         }
@@ -34,7 +34,10 @@ namespace ProxyHttpClient.Test
         [TestMethod]
         public void AddProtocolTypeByNameTest()
         {
+            var model = Mockup.GetMockupConfig();
+            bool result = model.AddProtocolTypeByName(SecurityProtocolNames.Ssl3);
 
+            Assert.IsTrue(result);
         }
     }
 }

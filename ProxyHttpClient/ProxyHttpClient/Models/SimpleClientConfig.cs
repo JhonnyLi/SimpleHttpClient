@@ -7,12 +7,12 @@ namespace ProxyHttpClient
     /// Client settings
     /// Target url etc
     /// </summary>
-    public class ProxyClientConfig : ProxyClientConfigInternals
+    public class SimpleClientConfig : SimpleClientConfigInternals
     {
         /// <summary>
         /// Will throw a ProxyClientUriException if it can't create and Uri from the provided url.
         /// </summary>
-        public ProxyClientConfig(string url = null)
+        public SimpleClientConfig(string url = null)
         {
             _targetUri = CreateUriFromUrl(url);
         }
