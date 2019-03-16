@@ -8,8 +8,8 @@
     <ProjectGuid>{098AA4B2-C1CE-42ED-AF03-A6C433AB29B1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ProxyHttpClient.Test</RootNamespace>
-    <AssemblyName>ProxyHttpClient.Test</AssemblyName>
+    <RootNamespace>SimpleHttpClient.Test</RootNamespace>
+    <AssemblyName>SimpleHttpClient.Test</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>

@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Net;
 using System.Text;
 
-namespace ProxyHttpClient
+namespace SimpleHttpClient
 {
     // Added as a proxy to avoid requiring more using from the user
     public enum SecurityProtocolNames
     {
         None = 0,
-        Ssl3 = 48,
-        Tls = 192,
-        Tls11 = 768,
-        Tls12 = 3072
+        HighestPossible = 1,
+        Ssl3 = SecurityProtocolType.Ssl3,
+        Tls = SecurityProtocolType.Tls,
+        Tls11 = SecurityProtocolType.Tls11,
+        Tls12 = SecurityProtocolType.Tls12
     }
 }

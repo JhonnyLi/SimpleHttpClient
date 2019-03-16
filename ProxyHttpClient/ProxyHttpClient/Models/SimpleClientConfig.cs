@@ -1,7 +1,8 @@
-﻿using System;
+﻿using SimpleHttpClient.ErrorHandling;
+using System;
 using System.Configuration;
 
-namespace ProxyHttpClient
+namespace SimpleHttpClient
 {
     /// <summary>
     /// Client settings
@@ -10,7 +11,7 @@ namespace ProxyHttpClient
     public class SimpleClientConfig : SimpleClientConfigInternals
     {
         /// <summary>
-        /// Will throw a ProxyClientUriException if it can't create and Uri from the provided url.
+        /// Will throw a UriException if it can't create and Uri from the provided url.
         /// </summary>
         public SimpleClientConfig(string url = null)
         {
@@ -21,22 +22,15 @@ namespace ProxyHttpClient
 
         protected Uri CreateUriFromUrl(string url)
         {
+            //Removed try catch, for now, since the if-statement should cover all that can make the new Uri fail
+            //If more url parsing is introduced the try catch should be implemented again
             if (!string.IsNullOrEmpty(url) && Uri.IsWellFormedUriString(url, UriKind.Absolute))
             {
-                Uri result;
-                try
-                {
-                    result = new Uri(url);
-                }
-                catch (ProxyClientUriException e)
-                {
-                    throw new ProxyClientUriException("Error: Could not create an Uri from the url provided.", e.InnerException);
-                }
-                return result;
+                return new Uri(url);
             }
             else
             {
-                throw new ProxyClientUriException("Error: Could not create an Uri from the url provided.");
+                throw new UriException(ErrorConstants.Uri.InvalidUrl);
             }
         }
     }

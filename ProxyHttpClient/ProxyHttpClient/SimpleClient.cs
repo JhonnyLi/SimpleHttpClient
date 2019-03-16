@@ -6,7 +6,7 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 
-namespace ProxyHttpClient
+namespace SimpleHttpClient
 {
     public class SimpleClient
     {
@@ -25,28 +25,20 @@ namespace ProxyHttpClient
             {
                 try
                 {
-                    //Set security protocol if specified
                     SetSecurityProtocol(config.ProtocolType);
 
-                    //Serialize object
                     var jsonContent = JsonConvert.SerializeObject(model);
 
-                    //Add headers
-                    //Accept
                     client.DefaultRequestHeaders.Accept.Clear();
                     client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                    //Custom
                     AddCustomHeaders(client, config.CustomHeaders);
-
-                    //Create content
+                    client.DefaultRequestHeaders.Authorization = null;
                     var byteContent = CreateBinaryContent(jsonContent);
 
-                    //Connect
                     Task<HttpResponseMessage> response = client.PostAsync(config._targetUri, byteContent);
                     response.Result.EnsureSuccessStatusCode();
 
-                    //Get response content
                     result = response.Result.Content.ReadAsStringAsync();
                 }
                 catch (HttpRequestException e)
@@ -62,7 +54,6 @@ namespace ProxyHttpClient
             if (protocol != 0)
             {
                 ServicePointManager.SecurityProtocol = protocol;
-                //ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
             }
         }
 
@@ -89,7 +80,7 @@ namespace ProxyHttpClient
         {
             var buffer = System.Text.Encoding.UTF8.GetBytes(jsonContent);
             var byteContent = new ByteArrayContent(buffer);
-            //Add content type headers to the package
+            //Add content type headers to the package itself
             byteContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
             return byteContent;
         }

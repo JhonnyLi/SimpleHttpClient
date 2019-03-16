@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net;
 using System.Text;
 
-namespace ProxyHttpClient
+namespace SimpleHttpClient
 {
     public static class ExtensionMethods
     {
@@ -67,6 +67,9 @@ namespace ProxyHttpClient
                     break;
                 case SecurityProtocolNames.Tls12:
                     model.ProtocolType = SecurityProtocolType.Tls12;
+                    break;
+                case SecurityProtocolNames.HighestPossible:
+                    model.ProtocolType = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
                     break;
                 case SecurityProtocolNames.None:
                     model.ProtocolType = 0;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net;
 using System.Text;
 
-namespace ProxyHttpClient
+namespace SimpleHttpClient
 {
     public abstract class SimpleClientConfigInternals
     {
