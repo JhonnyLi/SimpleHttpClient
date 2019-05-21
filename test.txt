@@ -1,0 +1,219 @@
+ Volume in drive C is Windows
+ Volume Serial Number is B06C-14D5
+
+ Directory of C:\Temp\git_test\SimpleHttpClient
+
+05/21/2019  11:32 AM    <DIR>          .
+05/21/2019  11:32 AM    <DIR>          ..
+05/21/2019  11:30 AM             2,581 .gitattributes
+05/21/2019  11:30 AM             4,565 .gitignore
+05/21/2019  11:30 AM    <DIR>          ProxyHttpClient
+05/21/2019  11:30 AM                72 README.md
+05/21/2019  11:32 AM                 0 test.txt
+               4 File(s)          7,218 bytes
+
+ Directory of C:\Temp\git_test\SimpleHttpClient\.git
+
+05/21/2019  11:30 AM               311 config
+05/21/2019  11:30 AM                73 description
+05/21/2019  11:30 AM                23 HEAD
+05/21/2019  11:30 AM    <DIR>          hooks
+05/21/2019  11:30 AM             2,319 index
+05/21/2019  11:30 AM    <DIR>          info
+05/21/2019  11:30 AM    <DIR>          logs
+05/21/2019  11:30 AM    <DIR>          objects
+05/21/2019  11:30 AM               114 packed-refs
+05/21/2019  11:30 AM    <DIR>          refs
+               5 File(s)          2,840 bytes
+
+ Directory of C:\Temp\git_test\SimpleHttpClient\.git\hooks
+
+05/21/2019  11:30 AM    <DIR>          .
+05/21/2019  11:30 AM    <DIR>          ..
+05/21/2019  11:30 AM               478 applypatch-msg.sample
+05/21/2019  11:30 AM               896 commit-msg.sample
+05/21/2019  11:30 AM             3,327 fsmonitor-watchman.sample
+05/21/2019  11:30 AM               189 post-update.sample
+05/21/2019  11:30 AM               424 pre-applypatch.sample
+05/21/2019  11:30 AM             1,642 pre-commit.sample
+05/21/2019  11:30 AM             1,348 pre-push.sample
+05/21/2019  11:30 AM             4,898 pre-rebase.sample
+05/21/2019  11:30 AM               544 pre-receive.sample
+05/21/2019  11:30 AM             1,492 prepare-commit-msg.sample
+05/21/2019  11:30 AM             3,610 update.sample
+              11 File(s)         18,848 bytes
+
+ Directory of C:\Temp\git_test\SimpleHttpClient\.git\info
+
+05/21/2019  11:30 AM    <DIR>          .
+05/21/2019  11:30 AM    <DIR>          ..
+05/21/2019  11:30 AM               240 exclude
+               1 File(s)            240 bytes
+
+ Directory of C:\Temp\git_test\SimpleHttpClient\.git\logs
+
+05/21/2019  11:30 AM    <DIR>          .
+05/21/2019  11:30 AM    <DIR>          ..
+05/21/2019  11:30 AM               192 HEAD
+05/21/2019  11:30 AM    <DIR>          refs
+               1 File(s)            192 bytes
+
+ Directory of C:\Temp\git_test\SimpleHttpClient\.git\logs\refs
+
+05/21/2019  11:30 AM    <DIR>          .
+05/21/2019  11:30 AM    <DIR>          ..
+05/21/2019  11:30 AM    <DIR>          heads
+05/21/2019  11:30 AM    <DIR>          remotes
+               0 File(s)              0 bytes
+
+ Directory of C:\Temp\git_test\SimpleHttpClient\.git\logs\refs\heads
+
+05/21/2019  11:30 AM    <DIR>          .
+05/21/2019  11:30 AM    <DIR>          ..
+05/21/2019  11:30 AM               192 master
+               1 File(s)            192 bytes
+
+ Directory of C:\Temp\git_test\SimpleHttpClient\.git\logs\refs\remotes
+
+05/21/2019  11:30 AM    <DIR>          .
+05/21/2019  11:30 AM    <DIR>          ..
+05/21/2019  11:30 AM    <DIR>          origin
+               0 File(s)              0 bytes
+
+ Directory of C:\Temp\git_test\SimpleHttpClient\.git\logs\refs\remotes\origin
+
+05/21/2019  11:30 AM    <DIR>          .
+05/21/2019  11:30 AM    <DIR>          ..
+05/21/2019  11:30 AM               192 HEAD
+               1 File(s)            192 bytes
+
+ Directory of C:\Temp\git_test\SimpleHttpClient\.git\objects
+
+05/21/2019  11:30 AM    <DIR>          .
+05/21/2019  11:30 AM    <DIR>          ..
+05/21/2019  11:30 AM    <DIR>          info
+05/21/2019  11:30 AM    <DIR>          pack
+               0 File(s)              0 bytes
+
+ Directory of C:\Temp\git_test\SimpleHttpClient\.git\objects\info
+
+05/21/2019  11:30 AM    <DIR>          .
+05/21/2019  11:30 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Temp\git_test\SimpleHttpClient\.git\objects\pack
+
+05/21/2019  11:30 AM    <DIR>          .
+05/21/2019  11:30 AM    <DIR>          ..
+05/21/2019  11:30 AM             3,900 pack-6a5fb0c103368915b977d07f9b0979443f608b32.idx
+05/21/2019  11:30 AM            20,670 pack-6a5fb0c103368915b977d07f9b0979443f608b32.pack
+               2 File(s)         24,570 bytes
+
+ Directory of C:\Temp\git_test\SimpleHttpClient\.git\refs
+
+05/21/2019  11:30 AM    <DIR>          .
+05/21/2019  11:30 AM    <DIR>          ..
+05/21/2019  11:30 AM    <DIR>          heads
+05/21/2019  11:30 AM    <DIR>          remotes
+05/21/2019  11:30 AM    <DIR>          tags
+               0 File(s)              0 bytes
+
+ Directory of C:\Temp\git_test\SimpleHttpClient\.git\refs\heads
+
+05/21/2019  11:30 AM    <DIR>          .
+05/21/2019  11:30 AM    <DIR>          ..
+05/21/2019  11:30 AM                41 master
+               1 File(s)             41 bytes
+
+ Directory of C:\Temp\git_test\SimpleHttpClient\.git\refs\remotes
+
+05/21/2019  11:30 AM    <DIR>          .
+05/21/2019  11:30 AM    <DIR>          ..
+05/21/2019  11:30 AM    <DIR>          origin
+               0 File(s)              0 bytes
+
+ Directory of C:\Temp\git_test\SimpleHttpClient\.git\refs\remotes\origin
+
+05/21/2019  11:30 AM    <DIR>          .
+05/21/2019  11:30 AM    <DIR>          ..
+05/21/2019  11:30 AM                32 HEAD
+               1 File(s)             32 bytes
+
+ Directory of C:\Temp\git_test\SimpleHttpClient\.git\refs\tags
+
+05/21/2019  11:30 AM    <DIR>          .
+05/21/2019  11:30 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Temp\git_test\SimpleHttpClient\ProxyHttpClient
+
+05/21/2019  11:30 AM    <DIR>          .
+05/21/2019  11:30 AM    <DIR>          ..
+05/21/2019  11:30 AM    <DIR>          ProxyHttpClient
+05/21/2019  11:30 AM    <DIR>          ProxyHttpClient.Test
+05/21/2019  11:30 AM             1,661 SimpleHttpClient.sln
+               1 File(s)          1,661 bytes
+
+ Directory of C:\Temp\git_test\SimpleHttpClient\ProxyHttpClient\ProxyHttpClient
+
+05/21/2019  11:30 AM    <DIR>          .
+05/21/2019  11:30 AM    <DIR>          ..
+05/21/2019  11:30 AM    <DIR>          ErrorHandling
+05/21/2019  11:30 AM    <DIR>          Helpers
+05/21/2019  11:30 AM    <DIR>          Models
+05/21/2019  11:30 AM             3,126 SimpleClient.cs
+05/21/2019  11:30 AM               825 SimpleHttpClient.csproj
+               2 File(s)          3,951 bytes
+
+ Directory of C:\Temp\git_test\SimpleHttpClient\ProxyHttpClient\ProxyHttpClient\ErrorHandling
+
+05/21/2019  11:30 AM    <DIR>          .
+05/21/2019  11:30 AM    <DIR>          ..
+05/21/2019  11:30 AM               589 ExceptionHelpers.cs
+05/21/2019  11:30 AM               433 Exceptions.cs
+               2 File(s)          1,022 bytes
+
+ Directory of C:\Temp\git_test\SimpleHttpClient\ProxyHttpClient\ProxyHttpClient\Helpers
+
+05/21/2019  11:30 AM    <DIR>          .
+05/21/2019  11:30 AM    <DIR>          ..
+05/21/2019  11:30 AM             3,008 ExtensionMethods.cs
+05/21/2019  11:30 AM               472 SimpleHelpers.cs
+               2 File(s)          3,480 bytes
+
+ Directory of C:\Temp\git_test\SimpleHttpClient\ProxyHttpClient\ProxyHttpClient\Models
+
+05/21/2019  11:30 AM    <DIR>          .
+05/21/2019  11:30 AM    <DIR>          ..
+05/21/2019  11:30 AM             1,175 SimpleClientConfig.cs
+05/21/2019  11:30 AM               725 SimpleClientConfigInternals.cs
+               2 File(s)          1,900 bytes
+
+ Directory of C:\Temp\git_test\SimpleHttpClient\ProxyHttpClient\ProxyHttpClient.Test
+
+05/21/2019  11:30 AM    <DIR>          .
+05/21/2019  11:30 AM    <DIR>          ..
+05/21/2019  11:30 AM    <DIR>          Mockup
+05/21/2019  11:30 AM               228 packages.config
+05/21/2019  11:30 AM    <DIR>          Properties
+05/21/2019  11:30 AM             2,652 SimpleClientConfigTests.cs
+05/21/2019  11:30 AM             5,018 SimpleHttpClient.Test.csproj
+               3 File(s)          7,898 bytes
+
+ Directory of C:\Temp\git_test\SimpleHttpClient\ProxyHttpClient\ProxyHttpClient.Test\Mockup
+
+05/21/2019  11:30 AM    <DIR>          .
+05/21/2019  11:30 AM    <DIR>          ..
+05/21/2019  11:30 AM             1,430 Mockup.cs
+               1 File(s)          1,430 bytes
+
+ Directory of C:\Temp\git_test\SimpleHttpClient\ProxyHttpClient\ProxyHttpClient.Test\Properties
+
+05/21/2019  11:30 AM    <DIR>          .
+05/21/2019  11:30 AM    <DIR>          ..
+05/21/2019  11:30 AM               661 AssemblyInfo.cs
+               1 File(s)            661 bytes
+
+     Total Files Listed:
+              42 File(s)         76,368 bytes
+              71 Dir(s)  21,125,758,976 bytes free
