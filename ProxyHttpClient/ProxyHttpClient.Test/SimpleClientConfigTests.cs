@@ -1,6 +1,6 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SimpleHttpClient;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SimpleHttpClient.Test.Helpers;
+using System;
 
 namespace SimpleHttpClient.Test
 {
@@ -66,6 +66,14 @@ namespace SimpleHttpClient.Test
             bool result = model.AddProtocolTypeByName(SecurityProtocolNames.Ssl3);
 
             Assert.IsTrue(result);
+        }
+
+        [TestMethod]
+        public void Constructor_PrivateMethod_ReturnsString()
+        {
+            SimpleClientConfig target = Mockup.GetMockupConfig();
+            var result = PrivateMethodHelper.InvokePrivateMethodWithName<SimpleClientConfig, Uri>(target, "CreateUriFromUrl", new object[] { Mockup.MockUrl });
+            Assert.AreEqual<string>(Mockup.MockUrl, result.OriginalString);
         }
     }
 }
