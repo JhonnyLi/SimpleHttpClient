@@ -1,6 +1,5 @@
 ﻿using SimpleHttpClient.ErrorHandling;
 using System;
-using System.Configuration;
 
 namespace SimpleHttpClient
 {
